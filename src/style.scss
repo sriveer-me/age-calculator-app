@@ -1,0 +1,68 @@
+@import '../node_modules/include-media/dist/include-media';
+$breakpoints: (medium: 769px, large: 1200px);
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+
+    --color-neutral-100: hsl(0, 0%, 100%);
+    --color-neutral-200: hsl(0, 0%, 94%);
+    --color-neutral-300: hsl(0, 0%, 86%);
+    --color-neutral-400: hsl(0, 1%, 44%);
+    --color-neutral-500: hsl(0, 0%, 8%);
+
+    --font-size-xl: 54px;
+    --font-size-input: 32px;
+    --font-weight-label: 700;
+    --font-size-body-copy: 14px;
+    @include media(">=medium"){
+        --font-size-xl: 100px;
+        --font-size-input: 50px;
+        --font-weight-label: 600;
+        --font-size-body-copy: 18px;
+    }
+
+    // these are not yet tested
+    --spacing-small: 8px;
+    --spacing-medium: 12px;
+    --spacing-large: 16px;
+    --spacing-extra-large: 50px;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.text-xl{
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: var(--color-neutral-500);
+}
+
+.text-input{
+    font-size: var(--font-size-input);
+    font-weight: 800;
+}
+
+.text-label{
+    font-size: var(--font-size-body-copy);
+    font-weight: var(--font-weight-label);
+    letter-spacing: 4px;
+    color: var(--color-neutral-400);
+}
+
+.text-error{
+    font-size: var(--font-size-body-copy);
+    color: var(--light-red);
+    font-style: italic;
+}

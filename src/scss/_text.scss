@@ -1,0 +1,41 @@
+@import '../../node_modules/include-media/dist/include-media';
+
+:root{
+    --font-size-xl: 54px;
+    --font-size-input: 32px;
+    --font-weight-label: 700;
+    --font-size-body-copy: 14px;
+    @include media(">=medium"){
+        --font-size-xl: 100px;
+        --font-size-input: 50px;
+        --font-weight-label: 600;
+        --font-size-body-copy: 18px;
+    }
+}
+
+.text-xl{
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: var(--color-neutral-500);
+}
+
+.text-input{
+    font-size: var(--font-size-input);
+    font-weight: 800;
+}
+
+.text-label{
+    font-size: var(--font-size-body-copy);
+    font-weight: var(--font-weight-label);
+    letter-spacing: 4px;
+    color: var(--color-neutral-400);
+    text-transform: uppercase;
+}
+
+.text-error{
+    font-size: var(--font-size-body-copy);
+    color: var(--light-red);
+    font-style: italic;
+}

@@ -12,9 +12,9 @@
 
     background-color: var(--color-neutral-100);
     border-radius: 10px;
-    border-bottom-right-radius: 40%;
+    border-bottom-right-radius: 30%;
 
-    padding: var(--spacing-4);
+    padding: var(--spacing-10) var(--spacing-5);
     @include media(">=large"){
         padding: 50px;
     }

@@ -9,4 +9,9 @@
 body{
     font-family: "Poppins", sans-serif;
     background-color: var(--color-neutral-200);
+    height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

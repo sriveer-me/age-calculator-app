@@ -7,6 +7,9 @@
 
 .input-row{
     display: flex;
+    @include media(">=large"){
+        width: 75%;
+    }
 
     column-gap: var(--spacing-5);
     @include media(">=medium"){
@@ -15,4 +18,63 @@
     @include media(">=large"){
         column-gap: var(--spacing-7);
     }
+}
+
+.button-row{
+
+    --row-height: 64px;
+    @include media(">=medium"){
+        --row-height: 85px;
+    }
+
+    position: relative;
+    height: var(--row-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.horizontal-rule{
+    border: 1px solid var(--color-neutral-300);
+}
+
+.btn{
+    cursor: pointer;
+}
+
+.btn-calculate{
+    transition: all linear .05s;
+    position: absolute;
+
+    right: 50%;
+    translate: 50% 0;
+    @include media(">=large"){
+        right: 0;
+        translate: 0;
+    }
+   
+    height: var(--row-height);
+    aspect-ratio: 1/1;
+
+    border-radius: 100%;
+    border: none;
+
+    background-color: var(--purple);
+
+    svg{
+        width: 32px;
+        @include media(">=medium"){
+            width: unset;
+        }
+    }
+}
+
+.btn-calculate:hover{
+    filter: brightness(125%);
+    scale: 1.08;
+}
+
+.btn-calculate:active{
+    filter: brightness(75%);
+    scale: 0.93;
 }

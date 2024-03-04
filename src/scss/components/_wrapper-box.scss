@@ -2,10 +2,10 @@
 
 .wrapper-box{
     max-width: 375px;
-    @include media(">medium"){
+    @include media(">=medium"){
         max-width: 700px;
     }
-    @include media(">large"){
+    @include media(">=large"){
         max-width: 1000px;
     }
     margin: 0 auto; //center the box
@@ -15,7 +15,7 @@
     border-bottom-right-radius: 40%;
 
     padding: var(--spacing-4);
-    @include media(">large"){
-        padding: var(--spacing-7);
+    @include media(">=large"){
+        padding: 50px;
     }
 }

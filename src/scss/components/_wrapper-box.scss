@@ -8,5 +8,14 @@
     @include media(">large"){
         max-width: 1000px;
     }
-    margin: 0 auto; //center the box    
+    margin: 0 auto; //center the box
+
+    background-color: var(--color-neutral-100);
+    border-radius: 10px;
+    border-bottom-right-radius: 40%;
+
+    padding: var(--spacing-4);
+    @include media(">large"){
+        padding: var(--spacing-7);
+    }
 }

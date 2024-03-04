@@ -1,6 +1,10 @@
 @import '../../scss/abstract';
 @import '../../scss/text';
 
+:root{
+    --name-text-size: 14px;
+}
+
 label{
     display: flex;
     flex-direction: column;
@@ -14,7 +18,11 @@ label{
 }
 
 .name-text{
-    @extend .text-label;
+    font-size: var(--name-text-size);
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--color-neutral-400);
+    text-transform: uppercase;
 }
 
 .input-rack{
@@ -22,28 +30,33 @@ label{
 }
 
 input{
-    border: 2px solid var(--color-neutral-300);
+    border: 1px solid var(--color-neutral-300);
     border-radius: 10px;
-    @extend .text-input;
     width: 100%;
 
-    padding: var(--spacing-2);
-    padding-left: var(--spacing-4);
-    @include media(">=large"){
-        padding: var(--spacing-3);
-        padding-left: var(--spacing-5);
+    font-size: 18px;
+    @include media(">=medium"){
+        font-size: 32px;
     }
+    font-weight: 800;
+    padding: var(--spacing-3);
+    padding-left: var(--spacing-4);
 }
 input::placeholder{
     text-transform: uppercase;
 }
 input:focus{
-    border: 2px solid var(--purple);
+    border: 1px solid var(--purple);
     outline: none;
 }
 
 .error-text{
-    @extend .text-error;
+    font-size: 8px;
+    @include media(">=medium"){
+        font-size: var(--name-text-size);
+    }
+    color: var(--light-red);
+    font-style: italic;
     visibility: hidden;
     opacity: 0;
 }

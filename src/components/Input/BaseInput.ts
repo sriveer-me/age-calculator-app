@@ -33,7 +33,7 @@ export default abstract class BaseInput extends HTMLElement {
         <label>
             <span class="name-text"></span>
             <span class="input-rack"></span>
-            <span class="error-text">placeholder error</span>
+            <span class="error-text">Must be a valid month</span>
         </label>
         `;
 
